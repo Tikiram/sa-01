@@ -10,7 +10,7 @@ describe('Practica #3 - Pruebas', function () {
         const reqUser = { password: "asdfasdf", email: "asdfasdf@gmail.com" };
         const dbUser = { PASSWORD: "asdfasdf", email: "asdfasdf@gmail.com" };
 
-        assert.strictEqual( checkUser(reqUser, dbUser), false)
+        assert.strictEqual( checkUser(reqUser, dbUser), true)
 
     });
 
