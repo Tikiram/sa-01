@@ -1,0 +1,8 @@
+version: '3'
+services:
+  products-api:
+    build: .
+    image: pagina-prod
+    container_name: pagina-prod-container
+    ports:
+      - 3000:3000
