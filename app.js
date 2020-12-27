@@ -11,6 +11,7 @@ const registrarProveedor = require('./routes/registrar-proveedor');
 const loginCliente = require('./routes/login-cliente');
 const loginProveedor = require('./routes/login-proveedor');
 const crearProductoProveedor = require('./routes/crear-producto-proveedor');
+const verProductos = require('./routes/ver-productos');
 
 var app = express();
 
@@ -31,7 +32,8 @@ app.use('/registrar-proveedor', registrarProveedor);
 app.use('/login-cliente', loginCliente);
 app.use('/login-proveedor', loginProveedor);
 app.use('/crear-producto-proveedor', crearProductoProveedor);
-
+app.use('/ver-productos', verProductos);
+app.use('/ver-productos-fase-3', verProductos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
