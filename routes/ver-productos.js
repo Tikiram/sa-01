@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
                 "nombre": product.nombre,
                 "descripcion": product.descripcion,
                 "stock": product.stock,
-                "precio": product.precio_proveedor,
+                "precio_venta": product.precio_cliente,
                 "foto": product.imagen,
             };
         });
