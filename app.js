@@ -13,6 +13,8 @@ const loginCliente = require('./routes/login-cliente');
 const loginProveedor = require('./routes/login-proveedor');
 const crearProductoProveedor = require('./routes/crear-producto-proveedor');
 const verProductos = require('./routes/ver-productos');
+const verProducto = require('./routes/ver-producto');
+const realizarCompra = require('./routes/realizar-compra');
 
 var app = express();
 
@@ -35,7 +37,8 @@ app.use('/login-cliente', loginCliente);
 app.use('/login-proveedor', loginProveedor);
 app.use('/crear-producto-proveedor', crearProductoProveedor);
 app.use('/ver-productos', verProductos);
-app.use('/ver-productos-fase-3', verProductos);
+app.use('/ver-producto', verProducto);
+app.use('/realizar-compra', realizarCompra);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
