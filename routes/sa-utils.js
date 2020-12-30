@@ -1,14 +1,26 @@
 const axios = require('axios');
-
+const fs = require('fs');
 const instance = axios.create();
 
 instance
     .interceptors
     .response
     .use((response) => {
-            console.log('Respuesta de:');
-            console.log(response.config.url);
-            console.log(JSON.stringify(response.data, null, 4));
+            // console.log('Respuesta de:');
+            // console.log(response.config.url);
+            // console.log(JSON.stringify(response.data, null, 4));
+            const line = `Mapeado a ${response.config.url}`;
+            console.log(line);
+
+            try {
+                fs.appendFile('inputs.txt', line + '\n', function (err) {
+                    if (err) throw err;
+                });
+            }
+            catch (e) {
+            }
+
+
             return response;
         },
         (error) => {
